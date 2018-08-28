@@ -13,13 +13,11 @@ def nyc_pigeon_organizer(data)
   pigeon_hash = Hash[unique_names.collect{|element| [element, ""]}]
 
   data.each do |category, value|
-    pigeon_hash[name][category] = []
-    
-    value.each do |key, name|
-      if unique_names.include?(name)
-        pigeon_hash[name][category].push(key.to_s)
-      end
-    end
+    data[category].each do |value, name|
+      if pigeon_hash.include?(name)
+        pigeon_hash[name][category].push(value.to_s)
+      end 
+    end 
   end 
   
   return pigeon_hash
