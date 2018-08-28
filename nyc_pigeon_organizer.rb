@@ -11,8 +11,10 @@ def nyc_pigeon_organizer(data)
     unique_names.push(all_names.uniq)
   end
  
- unique_names.each {|name| pigeon_hash[name] = {}}
+  unique_names.each {|name| pigeon_hash[name] = {}}
   
+  data.each do |category, value|
+    pigeon_hash[name][category] = []
   
   return pigeon_hash
 end
