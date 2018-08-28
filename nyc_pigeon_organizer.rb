@@ -14,7 +14,7 @@ def nyc_pigeon_organizer(data)
 
   data.each do |category, value|
     data[category].each do |value, name|
-      if pigeon_hash.include?(name)
+      if unique_names.include?(name)
         pigeon_hash[name][category].push(value.to_s)
       end 
     end 
