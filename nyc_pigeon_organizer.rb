@@ -1,14 +1,14 @@
 def nyc_pigeon_organizer(data)
+  pigeon_hash = {}
   pigeon_names = []
   
   data.each do |category, value|
-    value.each do |key, name|
-      pigeon_names.push(name)
+    value.each do |key, names|
+      pigeon_names.push(names)
     end 
   end 
   pigeon_names = pigeon_names.flatten.uniq
   
-  pigeon_hash = {}
   pigeon_names.each do |name| 
     pigeon_hash[name] = {}
   
