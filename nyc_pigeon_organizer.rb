@@ -16,6 +16,7 @@ def nyc_pigeon_organizer(data)
     if unique_names.include?(value)
       unique_names[:name][:color] = [key]
     end
+  end
 
   return pigeon_hash
 end
