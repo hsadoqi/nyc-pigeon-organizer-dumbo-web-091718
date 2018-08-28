@@ -13,8 +13,11 @@ def nyc_pigeon_organizer(data)
   pigeon_hash = Hash[unique_names.collect{|element| [element, ""]}]
 
   data[:color].each do |colors, name|
-      
-  
+      i = 0 
+      if name == pigeon_hash[i]
+        pigeon_hash[name][:color] << colors
+        i += 1 
+    end 
   end
 
   return pigeon_hash
