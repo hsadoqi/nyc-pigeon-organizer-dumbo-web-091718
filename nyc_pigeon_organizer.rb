@@ -15,7 +15,7 @@ def nyc_pigeon_organizer(data)
   data[:color].each do |colors, name|
       i = 0 
       if name == pigeon_hash[i]
-        pigeon_hash[:name][:color] << colors
+        pigeon_hash[i][:color] << colors
         i += 1 
     end 
   end
