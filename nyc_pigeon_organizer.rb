@@ -12,12 +12,8 @@ def nyc_pigeon_organizer(data)
   end
   pigeon_hash = Hash[unique_names.collect{|element| [element, ""]}]
 
-  data.each do |category, value|
-    data[category].each do |value, name|
-      if unique_names.include?(name)
-        pigeon_hash[name][category].push(value.to_s)
-      end 
-    end 
+  data[:color].each do |value, name|
+    pigeon_hash[name][category].push(value.to_s)
   end 
   
   return pigeon_hash
