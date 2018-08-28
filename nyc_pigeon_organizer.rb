@@ -11,7 +11,15 @@ def nyc_pigeon_organizer(data)
   pigeon_hash = {}
   pigeon_names.each {|name| pigeon_hash[name] = {}}
   
-  
-  
+  data.each do |category, value|
+    pigeon_hash[name][category] = []
+    
+    value.each do |key, names|
+      if names.include?(name)
+        pigeon_hash[name][category].push(key.to_s)
+      end 
+    end 
+  end 
+  pigeon_hash
 end
 
