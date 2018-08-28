@@ -14,7 +14,7 @@ def nyc_pigeon_organizer(data)
 
   data[:color].each do |value, name|
     pigeon_hash[name][category].push(value.to_s)
-  end 
+  end
   
   return pigeon_hash
 end
