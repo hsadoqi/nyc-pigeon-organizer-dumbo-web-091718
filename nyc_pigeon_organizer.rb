@@ -9,12 +9,13 @@ def nyc_pigeon_organizer(data)
   pigeon_names = pigeon_names.flatten.uniq
   
   pigeon_hash = {}
-  pigeon_names.each {|name| pigeon_hash[name] = {}}
+  pigeon_names.each do |name| 
+    pigeon_hash[name] = {}
   
-  data.each do |category, value|
+  data.each do |category, values|
     pigeon_hash[name][category] = []
     
-    value.each do |key, names|
+    values.each do |key, names|
       if names.include?(name)
         pigeon_hash[name][category].push(key.to_s)
       end 
