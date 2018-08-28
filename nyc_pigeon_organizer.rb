@@ -15,6 +15,7 @@ def nyc_pigeon_organizer(data)
   
   data.each do |category, value|
     pigeon_hash[name][category] = []
+  end 
   
   return pigeon_hash
 end
