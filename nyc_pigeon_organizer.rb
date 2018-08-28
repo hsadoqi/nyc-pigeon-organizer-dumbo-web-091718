@@ -14,7 +14,7 @@ def nyc_pigeon_organizer(data)
 
   data[:color].each do |key, value|
     if unique_names.include?(value)
-      unique_names[:name][:color] = [key]
+      unique_names[value][:color] = [key]
     end
   end
 
